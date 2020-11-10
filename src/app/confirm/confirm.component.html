@@ -1,0 +1,17 @@
+<div class="modal-content">
+    <span (click)="close()"class="close">&times;</span>
+    <div>
+        <label>Name:</label>
+        <input type="text" [(ngModel)]="name">
+    </div>
+    <div>
+        <label>Mobile Number:</label>
+        <input type="text" [(ngModel)]="number" [pattern]="mobNumberPattern"  #mobNumber="ngModel" maxlength="10">
+    </div>
+    <div *ngIf="mobNumber.errors">
+            <div class="error" *ngIf="mobNumber.errors.pattern">  
+                Mobile number not valid.  
+            </div>
+    </div>
+    
+</div>

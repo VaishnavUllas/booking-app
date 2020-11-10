@@ -1,0 +1,11 @@
+<div class="table">
+    <ol  id="horizontal-list" type="A">
+        <li class="seat"*ngFor="let item of [].constructor(25); let i = index">
+            <input [(ngModel)]="isBooked[i]" type="checkbox" id="{{i+1}}" [disabled]="!isBooked[i] && checkedNumber==seats" (change)="onChange(i)" />
+            <label for="{{i+1}}">{{i+1}}</label>
+        </li>
+    </ol>
+</div>
+<div>{{errmsg}}</div>                
+<button class="button" (click)="continue()">Continue</button>
+<app-confirm [name]="name" (closeEvent)="close()" *ngIf="isValid" class="modal"></app-confirm>

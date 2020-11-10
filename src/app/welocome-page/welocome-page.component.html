@@ -1,0 +1,19 @@
+<div>
+<label>Enter Your Name:</label><input [(ngModel)]="nameText" type="text">
+</div>
+<div>
+    <label>Select the number of seats:</label>
+    <select [(ngModel)]="noOfSeats">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+</div>
+    <div>
+    <button class="button" (click)="validate()">Continue</button>
+    </div>
+    <div class="errormessage">
+    {{errmsg}}
+    </div>
+    
