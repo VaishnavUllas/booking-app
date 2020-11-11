@@ -8,4 +8,4 @@
 </div>
 <div>{{errmsg}}</div>                
 <button class="button" (click)="continue()">Continue</button>
-<app-confirm [name]="name" (closeEvent)="close()" *ngIf="isValid" class="modal"></app-confirm>
+<app-confirm [childData]="data" (closeEvent)="close()" *ngIf="isValid" class="modal"></app-confirm>

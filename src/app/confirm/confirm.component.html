@@ -1,8 +1,14 @@
 <div class="modal-content">
     <span (click)="close()"class="close">&times;</span>
     <div>
+        <h3>Please Confirm Your Seats</h3>
+        <div>
+            Seats selected:<span *ngFor="let item of childData.seats;let i=index">{{item+1}}<span *ngIf="i!==childData.seats.length-1">,</span></span>
+        </div>
+    </div>
+    <div>
         <label>Name:</label>
-        <input type="text" [(ngModel)]="name">
+        <input type="text" [(ngModel)]="childData.name">
     </div>
     <div>
         <label>Mobile Number:</label>
@@ -13,5 +19,6 @@
                 Mobile number not valid.  
             </div>
     </div>
-    
+    <button class="button">Confirm</button>
+
 </div>

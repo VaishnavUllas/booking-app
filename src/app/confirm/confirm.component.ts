@@ -6,7 +6,7 @@ import { Component, OnInit, Input, Output,EventEmitter } from '@angular/core';
   styleUrls: ['./confirm.component.css']
 })
 export class ConfirmComponent implements OnInit {
-  @Input() name;
+  @Input() childData;
   @Output() closeEvent=new EventEmitter()
   public number;
   public mobNumberPattern = "^((\\+91-?)|0)?[0-9]{10}$";  
